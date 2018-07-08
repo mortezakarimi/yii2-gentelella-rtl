@@ -4,6 +4,7 @@
     "type": "yii2-extension",
     "keywords": ["yii2","extension","admin","panel","rtl","bootstrap3"],
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Morteza Karimi",
@@ -18,13 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mortezakarimi\\gentelellartl\\": ""
+          "mortezakarimi\\gentelellartl\\": ""
         }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ]
+    }
 }

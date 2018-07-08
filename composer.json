@@ -13,19 +13,13 @@
     "require": {
         "php": ">=5.4",
         "yiisoft/yii2": "~2.0.0",
-        "bower-asset/gentelella-rtl": "^1.0",
-        "bower-asset/bootstrap-rtl": "^3.4"
+        "bower-asset/gentelella-rtl": "~1.0",
+        "bower-asset/bootstrap-rtl": "~3.4"
     },
     "autoload": {
         "psr-4": {
             "mortezakarimi\\gentelellartl\\": ""
         }
-    },
-    "config": {
-      "asset-installer-paths": {
-        "npm-asset-library": "vendor/npm",
-        "bower-asset-library": "vendor/bower"
-      }
     },
     "repositories": [
         {

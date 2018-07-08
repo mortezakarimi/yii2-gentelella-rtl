@@ -1,0 +1,21 @@
+{
+    "name": "mortezakarimi/yii2-gentelella-rtl",
+    "description": "It is a free admin template for backend of yii framework 2 based on gentelella-rtl theme.  This extension consists assets bundles, widgets, some page views and a layout example.  You can see all features and usage examples on demo site.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","admin","panel","rtl","bootstrap3"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morteza Karimi",
+            "email": "mortezak1373@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mortezakarimi\\gentelellartl\\": ""
+        }
+    }
+}

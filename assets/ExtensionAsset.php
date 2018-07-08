@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
 
 class ExtensionAsset extends AssetBundle
 {
-    public $sourcePath = '@yiister/gentelella/assets/src';
+    public $sourcePath = '@mortezakarimi/gentelella-rtl/assets/src';
     public $js = [
         'js/extension.js',
     ];

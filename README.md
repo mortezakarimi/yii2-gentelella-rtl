@@ -1,6 +1,8 @@
 Free RTL Bootstrap 3 Admin Template for Yii2 Framework
 ======================================================
-It is a free admin template for backend of yii framework 2 based on gentelella-rtl theme.  This extension consists assets bundles, widgets, some page views and a layout example.  You can see all features and usage examples on demo site.
+It is a free admin template for backend of yii framework 2 based on (gentelella-rtl)[] theme.
+
+This extension consists assets bundles, widgets, some page views and a layout example.
 
 Installation
 ------------

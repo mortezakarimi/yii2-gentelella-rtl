@@ -47,10 +47,12 @@ class Menu extends \yii\widgets\Menu
      */
     protected function renderItem($item)
     {
+        if (empty($item['url']))
+            $item['url'] = "javascript:void(0);";
         $renderedItem = parent::renderItem($item);
         if (isset($item['badge'])) {
             $badgeOptions = ArrayHelper::getValue($item, 'badgeOptions', []);
-            Html::addCssClass($badgeOptions, 'label pull-right');
+            Html::addCssClass($badgeOptions, 'label pull-left');
         } else {
             $badgeOptions = null;
         }

@@ -1,33 +1,32 @@
-Free RTL Bootstrap 3 Admin Template for Yii2 Framework
+<div dir="rtl" align="right">
+
+ Gentelella RTL / قالب راست چین شده مدیریت برای فریمورک Yii2
 ======================================================
-It is a free admin template for backend of Yii framework 2 based on [gentelella-rtl](https://github.com/mortezakarimi/gentelella-rtl) theme.
+قالب راست چین مدیریت مخصوص فریمورک Yii2  بر اساس قالب [gentelella-rtl](https://github.com/mortezakarimi/gentelella-rtl).
 
-This extension consists assets bundles, widgets, some page views and a layout example.
+این قالب بر اساس کد موجود در [yii2-gentelella](https://github.com/yiister/yii2-gentelella) پیاده سازی گشته است و شامل بسته‌های کد لازم و تعدادی ویجت و همچنین دارای ساختار قالب مورد نیاز برای پروژه می‌باشد.
 
-Installation
+برای اطلاعات بیشتر در مورد نحوه استفاده از امکانات پکیج به ریپوزیتوری اصلی در این آدرس  [yii2-gentelella](https://github.com/yiister/yii2-gentelella) مراجعه فرمایید.
+
+روش نصب
 ------------
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+بهترین روش نصب با استفاده از  [composer](http://getcomposer.org/download/).
 
-Either run
-
-```
-php composer.phar require --prefer-dist mortezakarimi/yii2-gentelella-rtl "*"
-```
-
-or add
+اجرای دستور زیر
 
 ```
-"mortezakarimi/yii2-gentelella-rtl": "*"
+php composer.phar require --prefer-dist mortezakarimi/yii2-gentelella-rtl "~1.0.0"
 ```
 
-to the require section of your `composer.json` file.
+یا افزودن
 
+```
+"mortezakarimi/yii2-gentelella-rtl": "~1.0.0‍"
+```
 
-Usage
------
+به بخش `require ` در فایل `composer.json`.
 
-Once the extension is installed, simply use it in your code by  :
-
-```php
-<?= \mortezakarimi\gentelellartl\AutoloadExample::widget(); ?>```
+در آینده انجام خواهد شد
+---------------
+در آینده نزدیک مستندات اضافه خواهد شد.

@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
 
 class ThemeSrcAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/gentelella-rtl/src/js';
+    public $sourcePath = '@bower/gentelella-rtl/build/js';
 
     public $js = [
         'helpers/smartresize.js',

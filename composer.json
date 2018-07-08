@@ -8,21 +8,28 @@
     "admin",
     "panel",
     "rtl",
-    "bootstrap3"
+    "bootstrap3",
+    "backend",
+    "gentelella-rtl",
+    "theme",
+    "asset"
   ],
   "license": "MIT",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Morteza Karimi",
-      "email": "mortezak1373@gmail.com"
+      "email": "mortezak1373@gmail.com",
+      "role": "Creator",
+      "homepage": "https://github.com/mortezakarimi"
     }
   ],
   "require": {
-    "php": ">=5.4",
+    "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0.0",
-    "bower-asset/gentelella-rtl": "~1.0",
-    "bower-asset/bootstrap-rtl": "~3.4"
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "rmrevin/yii2-fontawesome": "~2.0",
+    "bower-asset/bootstrap-rtl": "~3.4",
+    "bower-asset/gentelella-rtl": "~1.0"
   },
   "autoload": {
     "psr-4": {

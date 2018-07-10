@@ -29,7 +29,7 @@
     "yiisoft/yii2-bootstrap": "~2.0.0",
     "rmrevin/yii2-fontawesome": "~2.0",
     "bower-asset/bootstrap-rtl": "~3.4",
-    "bower-asset/gentelella-rtl": "~1.0"
+    "bower-asset/gentelella-rtl": "1.0.5"
   },
   "autoload": {
     "psr-4": {

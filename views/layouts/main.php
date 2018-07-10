@@ -126,10 +126,10 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                         <a data-toggle="tooltip" data-placement="top" title="تنظیمات">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="تمام صفحه">
+                        <a data-toggle="tooltip" data-placement="top" title="تمام صفحه" onclick="toggleFullScreen();">
                             <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="قفل">
+                        <a data-toggle="tooltip" data-placement="top" title="قفل" class="lock_btn">
                             <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                         </a>
                         <?= Html::a('<span class="glyphicon glyphicon-off" aria-hidden="true"></span>', ['site/logout'], ['data' => ['method' => 'post', 'toggle' => "tooltip", 'placement' => "top", 'title' => "خروج"]]) ?>
@@ -261,6 +261,21 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
         </ul>
         <div class="clearfix"></div>
         <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+    <div id="lock_screen">
+        <table>
+            <tr>
+                <td>
+                    <div class="clock"></div>
+                    <span class="unlock">
+                    <span class="fa-stack fa-5x">
+                      <i class="fa fa-square-o fa-stack-2x fa-inverse"></i>
+                      <i id="icon_lock" class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                </span>
+                </td>
+            </tr>
+        </table>
     </div>
     <?php $this->endBody(); ?>
     </body>

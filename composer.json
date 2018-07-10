@@ -2,6 +2,7 @@
   "name": "mortezakarimi/yii2-gentelella-rtl",
   "description": "It is a free admin template for backend of yii framework 2 based on gentelella-rtl theme.",
   "type": "yii2-extension",
+  "version": "1.0.1",
   "keywords": [
     "yii2",
     "extension",
@@ -29,7 +30,7 @@
     "yiisoft/yii2-bootstrap": "~2.0.0",
     "rmrevin/yii2-fontawesome": "~2.0",
     "bower-asset/bootstrap-rtl": "~3.4",
-    "bower-asset/gentelella-rtl": "1.0.5"
+    "bower-asset/gentelella-rtl": "~1.0.5"
   },
   "autoload": {
     "psr-4": {

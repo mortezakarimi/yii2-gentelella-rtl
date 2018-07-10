@@ -15,15 +15,23 @@
 
 اجرای دستور زیر
 
+<div dir="LTR" align="left" style="direction:ltr;text-align:left;">
+
 ```
 php composer.phar require --prefer-dist mortezakarimi/yii2-gentelella-rtl "~1.0.0"
 ```
 
+</div>
+
 یا افزودن
+
+<div dir="LTR" align="left" style="direction:ltr;text-align:left;">
 
 ```
 "mortezakarimi/yii2-gentelella-rtl": "~1.0.0‍"
 ```
+
+</div>
 
 به بخش `require ` در فایل `composer.json`.
 

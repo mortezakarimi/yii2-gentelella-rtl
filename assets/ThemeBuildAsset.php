@@ -11,9 +11,13 @@ use yii\web\AssetBundle;
 
 class ThemeBuildAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/gentelella-rtl/build/';
+    public $sourcePath = '@npm/gentelella-rtl/build/';
 
     public $css = [
         'css/custom.css',
+    ];
+    public $js = [
+        'js/helpers/smartresize.js',
+        'js/custom.js',
     ];
 }

@@ -17,7 +17,6 @@ class ThemeAsset extends AssetBundle
         'mortezakarimi\gentelellartl\assets\BootstrapRTLAsset',
         'rmrevin\yii\fontawesome\AssetBundle',
         'mortezakarimi\gentelellartl\assets\BootstrapProgressbar',
-        'mortezakarimi\gentelellartl\assets\ThemeBuildAsset',
-        'mortezakarimi\gentelellartl\assets\ThemeSrcAsset',
+        'mortezakarimi\gentelellartl\assets\ThemeBuildAsset'
     ];
 }

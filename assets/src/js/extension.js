@@ -10,7 +10,7 @@ GentelellaExtension = {
         if (this.getCookie('menuIsCollapsed') != 'true') {
             $SIDEBAR_MENU.find('li.active').parents('ul').slideDown();
         }
-        jQuery('#menu_toggle').click(function() {
+        jQuery('#menu_toggle').click(function () {
             GentelellaExtension.setCookie('menuIsCollapsed', jQuery('body').hasClass('nav-sm'), undefined, '/');
         });
     },
@@ -31,17 +31,17 @@ GentelellaExtension = {
                 setStr = unescape(cookie.substring(offset, end));
             }
         }
-        return(setStr);
+        return (setStr);
     },
     'setCookie': function (name, value, expires, path, domain, secure) {
         document.cookie = name + "=" + escape(value) +
-        ((expires) ? "; expires=" + expires : "") +
-        ((path) ? "; path=" + path : "") +
-        ((domain) ? "; domain=" + domain : "") +
-        ((secure) ? "; secure" : "");
+            ((expires) ? "; expires=" + expires : "") +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            ((secure) ? "; secure" : "");
     }
 };
 
-jQuery(function() {
+jQuery(function () {
     GentelellaExtension.init();
 });

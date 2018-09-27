@@ -13,6 +13,7 @@
  *   }`
  *
  */
+
 /**
  * @var $this yii\web\View
  * @var $name string
@@ -23,12 +24,14 @@
 
 use yii\helpers\Html;
 use rmrevin\yii\fontawesome\FA;
+use mortezakarimi\gentelellartl\widgets\Panel;
 
 $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
 
 $this->title = $name;
 ?>
 <?php if (!Yii::$app->user->isGuest): ?>
+    <?php Panel::begin() ?>
     <div class="col-middle">
         <div class="text-center text-center">
             <h1 class="error-number"><?= $exception->statusCode ?></h1>
@@ -38,10 +41,11 @@ $this->title = $name;
             </p>
             <p>
                 لطفا با ما تماس بگیرید اگر فکر می کنید این یک خطای سرور است.
-                متشکریم.<?= Html::mailto('گزارش مشکل!',Yii::$app->params['adminEmail']) ?>
+                متشکریم.<?= Html::mailto('گزارش مشکل!', Yii::$app->params['adminEmail']) ?>
             </p>
         </div>
     </div>
+    <?php Panel::end() ?>
 <?php else: ?>
     <?php
     $this->context->layout = false;
@@ -78,7 +82,7 @@ $this->title = $name;
                         </p>
                         <p>
                             لطفا با ما تماس بگیرید اگر فکر می کنید این یک خطای سرور است.
-                            متشکریم.<?= Html::mailto('گزارش مشکل!',Yii::$app->params['adminEmail']) ?>
+                            متشکریم.<?= Html::mailto('گزارش مشکل!', Yii::$app->params['adminEmail']) ?>
                         </p>
                     </div>
                 </div>

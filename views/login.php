@@ -1,15 +1,18 @@
 <?php
 
 /**
+ * @var LoginForm $modelLogin
  * @var string $content
  * @var \yii\web\View $this
  */
 
 use yii\helpers\Html;
 use rmrevin\yii\fontawesome\FA;
+use yii\bootstrap\ActiveForm;
+use app\models\LoginForm;
 
+\mortezakarimi\gentelellartl\assets\AnimateCssAsset::register($this);
 $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
-
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
@@ -39,35 +42,44 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
-                <form>
-                    <h1>فرم ورود</h1>
-                    <div>
-                        <input type="text" class="form-control" placeholder="نام کاربری" required="" />
-                    </div>
-                    <div>
-                        <input type="password" class="form-control" placeholder="رمز ورود" required="" />
-                    </div>
-                    <div>
-                        <a class="btn btn-default submit" href="index.html">ورود</a>
+                <?php $form = ActiveForm::begin([
+                    'id' => 'login-form',
+                    'fieldConfig' => [
+                        'errorOptions' => [
+                            'encode' => false,
+                        ]
+                    ]
+                ]); ?>
+                <h1>فرم ورود</h1>
+                <div class="row">
+                    <?= $form->field($modelLogin, 'username')->textInput(['placeholder' => $modelLogin->getAttributeLabel('username'), 'autocomplete' => 'off'])->label(false) ?>
+                </div>
+                <div class="row">
+                    <?= $form->field($modelLogin, 'password')->passwordInput(['placeholder' => $modelLogin->getAttributeLabel('password'), 'autocomplete' => 'off'])->label(false) ?>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-11">
+                        <?= Html::submitButton('ورود', ['class' => 'btn btn-default submit', 'name' => 'login-button']) ?>
                         <a class="reset_pass" href="#reset">رمز ورود را از دست دادید؟</a>
                     </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="separator">
+                    <p class="change_link">جدید در سایت؟
+                        <a href="#signup" class="to_register"> ایجاد حساب </a>
+                    </p>
 
                     <div class="clearfix"></div>
+                    <br/>
 
-                    <div class="separator">
-                        <p class="change_link">جدید در سایت؟
-                            <a href="#signup" class="to_register"> ایجاد حساب </a>
-                        </p>
-
-                        <div class="clearfix"></div>
-                        <br />
-
-                        <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                            <p>©1397 تمامی حقوق محفوظ. Gentelella Alela! یک قالب بوت استرپ 3. حریم خصوصی و شرایط</p>
-                        </div>
+                    <div>
+                        <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                        <p>©1397 تمامی حقوق محفوظ. Gentelella Alela! یک قالب بوت استرپ 3. حریم خصوصی و شرایط</p>
                     </div>
-                </form>
+                </div>
+                <?php ActiveForm::end(); ?>
             </section>
         </div>
         <div id="register" class="animate form registration_form">
@@ -75,13 +87,13 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                 <form>
                     <h1>ایجاد حساب</h1>
                     <div>
-                        <input type="text" class="form-control" placeholder="نام کاربری" required="" />
+                        <input type="text" class="form-control" placeholder="نام کاربری" required=""/>
                     </div>
                     <div>
-                        <input type="email" class="form-control" placeholder="ایمیل" required="" />
+                        <input type="email" class="form-control" placeholder="ایمیل" required=""/>
                     </div>
                     <div>
-                        <input type="password" class="form-control" placeholder="رمز ورود" required="" />
+                        <input type="password" class="form-control" placeholder="رمز ورود" required=""/>
                     </div>
                     <div>
                         <a class="btn btn-default submit" href="index.html">ارسال</a>
@@ -95,7 +107,7 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                         </p>
 
                         <div class="clearfix"></div>
-                        <br />
+                        <br/>
 
                         <div>
                             <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
@@ -111,12 +123,12 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                 <form action="index.html">
                     <h1>بازیابی رمز عبور</h1>
                     <div class="form-group has-feedback">
-                        <input type="email" class="form-control" name="email" placeholder="ایمیل" />
+                        <input type="email" class="form-control" name="email" placeholder="ایمیل"/>
                         <div class="form-control-feedback">
                             <i class="fa fa-envelope-o text-muted"></i>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-default btn-block">بازیابی رمز عبور </button>
+                    <button type="submit" class="btn btn-default btn-block">بازیابی رمز عبور</button>
                     <div class="clearfix"></div>
 
                     <div class="separator">
@@ -125,7 +137,7 @@ $bundle = mortezakarimi\gentelellartl\assets\Asset::register($this);
                         </p>
 
                         <div class="clearfix"></div>
-                        <br />
+                        <br/>
 
                         <div>
                             <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>

@@ -8,6 +8,7 @@
 namespace mortezakarimi\gentelellartl\widgets;
 
 use rmrevin\yii\fontawesome\component\Icon;
+use rmrevin\yii\fontawesome\FA;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
@@ -31,7 +32,7 @@ class Menu extends \yii\widgets\Menu
     /**
      * @inheritdoc
      */
-    public $activateParents = true;
+    public $activateParents = false;
 
     /**
      * @inheritdoc
@@ -49,6 +50,8 @@ class Menu extends \yii\widgets\Menu
     {
         if (empty($item['url']))
             $item['url'] = "javascript:void(0);";
+
+
         $renderedItem = parent::renderItem($item);
         if (isset($item['badge'])) {
             $badgeOptions = ArrayHelper::getValue($item, 'badgeOptions', []);
@@ -60,7 +63,7 @@ class Menu extends \yii\widgets\Menu
             $renderedItem,
             [
                 '{icon}' => isset($item['icon'])
-                    ? new Icon($item['icon'], ArrayHelper::getValue($item, 'iconOptions', []))
+                    ? FA::i($item['icon'], ArrayHelper::getValue($item, 'iconOptions', []))
                     : '',
                 '{badge}' => (
                     isset($item['badge'])
@@ -68,7 +71,7 @@ class Menu extends \yii\widgets\Menu
                         : ''
                     ) . (
                     isset($item['items']) && count($item['items']) > 0
-                        ? (new Icon('chevron-down'))->tag('span')
+                        ? FA::i(FA::_CHEVRON_DOWN, ['tag' => 'span'])
                         : ''
                     ),
             ]

@@ -35,6 +35,23 @@ php composer.phar require --prefer-dist mortezakarimi/yii2-gentelella-rtl "~1.0.
 
 به بخش `require ` در فایل `composer.json`.
 
+استفاده از تولید کننده ساخت صفحات
+----------------------
+
+با افزودن کد زیر به بخش `gii` در تنظیمات سایت می‌توانید از تولید کننده صفحات استفاده کنید.
+
+<div dir="LTR" align="left" style="direction:ltr;text-align:left;">
+
+```php
+'generators' => [
+            'gentelella-rtl' => [
+                'class' => 'mortezakarimi\gentelellartl\generators\crud\Generator'
+            ]
+        ],
+```
+
+</div>
+
 در آینده انجام خواهد شد
 ---------------
 در آینده نزدیک مستندات اضافه خواهد شد.

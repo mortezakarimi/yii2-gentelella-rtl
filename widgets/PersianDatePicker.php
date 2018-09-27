@@ -126,10 +126,15 @@ class PersianDatePicker extends InputWidget
     {
         $view = $this->getView();
         \app\assets\PersianDatePickerAsset::register($view);
+        $initDate = null;
+        if (!empty($this->initDateValue)) {
+            $initDate = Yii::$app->formatter->asTimestamp($this->initDateValue);
+        }
+
         if ($this->inline === true) {
-            $script = "var pd_" . Html::getAttributeName($this->attribute) . "=$('#" . $this->options['id'] . "_inlineDatePicker').persianDatepicker(" . Json::encode($this->pluginOptions) . ");$(document).on('click','#" . $this->options['id'] . "_clearInput" . "',function(e){e.preventDefault();pd_" . Html::getAttributeName($this->attribute) . ".setDate(new Date()); $('#" . $this->options['id'] . "').val('');pd_" . Html::getAttributeName($this->attribute) . ".options.onSelect()})";
+            $script = "var pd_" . Html::getAttributeName($this->attribute) . "=$('#" . $this->options['id'] . "_inlineDatePicker').persianDatepicker(" . Json::encode($this->pluginOptions) . ");$(document).on('click','#" . $this->options['id'] . "_clearInput" . "',function(e){e.preventDefault();pd_" . Html::getAttributeName($this->attribute) . ".setDate(new persianDate.unix({$initDate})); $('#" . $this->options['id'] . "').val('');pd_" . Html::getAttributeName($this->attribute) . ".options.onSelect()})";
         } else {
-            $script = "var pd_" . Html::getAttributeName($this->attribute) . "=$('#" . $this->options['id'] . "_datePickerInput').persianDatepicker(" . Json::encode($this->pluginOptions) . ");$(document).on('click','#" . $this->options['id'] . "_clearInput" . "',function(e){e.preventDefault();pd_" . Html::getAttributeName($this->attribute) . ".setDate(new Date()); $('#" . $this->options['id'] . "').val('');$('#" . $this->options['id'] . "_datePickerInput').val('');pd_" . Html::getAttributeName($this->attribute) . ".options.onSelect()})";
+            $script = "var pd_" . Html::getAttributeName($this->attribute) . "=$('#" . $this->options['id'] . "_datePickerInput').persianDatepicker(" . Json::encode($this->pluginOptions) . ");$(document).on('click','#" . $this->options['id'] . "_clearInput" . "',function(e){e.preventDefault();pd_" . Html::getAttributeName($this->attribute) . ".setDate(new persianDate.unix({$initDate})); $('#" . $this->options['id'] . "').val('');$('#" . $this->options['id'] . "_datePickerInput').val('');pd_" . Html::getAttributeName($this->attribute) . ".options.onSelect()})";
         }
         $view->registerJs($script);
         if (!empty(Html::getAttributeValue($this->model, $this->attribute))) {

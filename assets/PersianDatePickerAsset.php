@@ -5,7 +5,7 @@
  */
 
 // You must change it to use in your application
-namespace app\assets;
+namespace mortezakarimi\gentelellartl\assets;
 
 use yii\web\AssetBundle;
 
@@ -28,6 +28,6 @@ class PersianDatePickerAsset extends AssetBundle
         'js/persian-datepicker.min.js'
     ];
     public $depends = [
-        'app\assets\PersianDateAsset',
+        'mortezakarimi\gentelellartl\assets\PersianDateAsset',
     ];
 }

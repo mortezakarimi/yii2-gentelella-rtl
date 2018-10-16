@@ -11,7 +11,7 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
 use yii\widgets\InputWidget;
-use app\assets\PersianDatePickerAsset;
+use mortezakarimi\gentelellartl\assets\PersianDatePickerAsset;
 
 class PersianDatePicker extends InputWidget
 {
@@ -125,7 +125,7 @@ class PersianDatePicker extends InputWidget
     public function registerAssetBundle()
     {
         $view = $this->getView();
-        \app\assets\PersianDatePickerAsset::register($view);
+        \mortezakarimi\gentelellartl\assets\PersianDatePickerAsset::register($view);
         $initDate = null;
         if (!empty($this->initDateValue)) {
             $initDate = Yii::$app->formatter->asTimestamp($this->initDateValue);

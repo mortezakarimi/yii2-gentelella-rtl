@@ -5,7 +5,7 @@
  */
 
 // You must change it to use in your application
-namespace app\assets;
+namespace mortezakarimi\gentelellartl\assets;
 
 use yii\web\AssetBundle;
 

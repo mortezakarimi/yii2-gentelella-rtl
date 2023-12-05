@@ -27,7 +27,7 @@
     "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0.0",
     "yiisoft/yii2-bootstrap": "~2.0.0",
-    "rmrevin/yii2-fontawesome": "~2.0",
+    "rmrevin/yii2-fontawesome": "~3.0",
     "bower-asset/bootstrap-rtl": "~3.4",
     "bower-asset/persian-datepicker": "^1.1",
     "npm-asset/gentelella-rtl": "~1.3"
